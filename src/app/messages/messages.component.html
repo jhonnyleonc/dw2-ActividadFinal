@@ -1,0 +1,15 @@
+<!-- Div que se muestra si el arreglo messageService.messages tiene elementos -->
+<div *ngIf="messageService.messages.length">
+
+    <!-- Encabezado h2 -->
+    <h2>Mensajes</h2>
+  
+    <!-- Botón para limpiar los mensajes -->
+    <button type="button" class="clear"
+            (click)="messageService.clear()"> Limpiar Mensajes</button>
+  
+    <!-- Div que contiene los mensajes -->
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  
+  </div>
+  

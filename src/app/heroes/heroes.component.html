@@ -1,0 +1,108 @@
+<!-- NOTAS 
+- para comentar es con el atajo de ctrl+k seguido de eso presionamos la letra c
+-->
+
+
+
+<!--Primera fase
+{{hero}} //al abrir el archivo de html de heroes, esto lo que hace es mostrar el dato que esta dentro de hero, y como vimos en la primera fase
+en el archivo heroes.component.ts ya habiamos declarado un valor estatico a la variable de hero es por esto que ponemos esta propiedad
+
+---2
+<h1>{{title}}</h1>
+<app-heroes></app-heroes>
+//aca ahora simplemente llamamos al app-heroes que es el selector de elemento del archivo heroescomponent, entonces, 
+
+
+--3
+<h2>{{hero.name}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+//aca lo que hacemos que es que muestre los datos de id y name  que estan siendo exportados del archivo component.ts
+
+cambiamos el el h2 por
+<h2>{{hero.name | uppercase}} Details</h2> 
+//esto lo que hace es poner el nombre del heroe en mayusculas
+
+--4
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div>
+//en  este codigo se ocupa la sintaxis que es un enlace bidireccional de angular
+//Esto vinculará la propiedad hero.name al cuadro de texto HTML, por lo que Puede pasar datos en ambas direcciones desde la propiedad hero.name 
+//al cuadro de texto y desde el cuadro de texto a la propiedad hero.name.
+
+
+--5
+<h2>My Heroes</h2>
+<ul class="heroes">
+  aca ocupamos el ngFor para cuando los heroes son diferentes, angular va eliminar la clase de css es decir ya no va estar con
+  el colo negro que esta en la hoja de estilo
+  <li *ngFor="let hero of heroes">
+    Cuando el héroe de la fila actual es el mismo que el héroe seleccionado, 
+      vamos hacer que angular agregue el css selecionado. Cuando los dos héroes son diferentes, Angular tendria que elimina la clase.-->
+      <!-- <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span>
+        <span class="name">{{hero.name}}</span>
+      </button>
+    </li>
+  </ul> -->
+
+  <!--formulario al darle click-->
+  <!-- en esta parte ocupamos el ngIf que es un directiva similar a ngFor, pero lo que hara este if es
+  que le dice a angular que haga la seleccion solo cuando la selectedHero se define despues de haber sido seleccionado
+  cuando se le hace un click en un hero-->
+<!-- <div *ngIf="selectedHero">
+  esta parte nos traemos el nomnre del hero la darle click
+  <h2>Bienvenido! {{selectedHero.name | uppercase}}</h2>
+  aca obtenemos el id junto con el nombre al darle click
+  <div>id: {{selectedHero.id}}</div>
+  <div>
+    estas son las etiquetas de label mas los nombre
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
+</div> -->
+
+
+<!-- FASE 3
+  Encabezado h2 -->
+<!-- <h2>My Heroes</h2>
+
+ Lista de héroes usando *ngFor para iterar sobre el arreglo 'heroes' 
+<ul class="heroes">
+   Para cada héroe en 'heroes', crea un elemento <li> 
+  <li *ngFor="let hero of heroes">
+     Botón que muestra el nombre del héroe y activa el evento (click) para seleccionar el héroe 
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+       Muestra el ID del héroe como un distintivo 
+      <span class="badge">{{hero.id}}</span>
+       Muestra el nombre del héroe 
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+
+ Componente 'app-hero-detail' para mostrar los detalles del héroe seleccionado 
+<app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
+
+<!-- FASE 5 
+  
+  Encabezado h2 -->
+<h2>Ciudades</h2>
+<!-- Lista de héroes utilizando la directiva *ngFor para iterar sobre cada héroe en el arreglo 'heroes' -->
+<ul class="heroes">
+  <!-- Cada héroe se muestra como un elemento de la lista -->
+  <li *ngFor="let hero of heroes">
+    <!-- Enlace que utiliza routerLink para enlazar a la vista de detalle del héroe con su ID como parte de la URL -->
+    <a routerLink="/detail/{{hero.id}}">
+      <!-- Etiqueta span para mostrar el ID del héroe como un distintivo -->
+      <span class="badge">{{hero.id}}</span>
+      <!-- Muestra el nombre del héroe -->
+      {{hero.name}}
+    </a>
+  </li>
+</ul>

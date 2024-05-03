@@ -1,0 +1,25 @@
+
+<!-- FASE 4
+    Muestra el titulo de la aplicacion
+<h1>{{title}}</h1>
+
+ Componente 'app-heroes' para mostrar la lista de heroes 
+<app-heroes></app-heroes>
+
+ Componente 'app-messages' para mostrar mensajes de la aplicacion 
+<app-messages></app-messages> -->
+
+
+<!-- FASE 5 
+    
+    Encabezado h1 con interpolación para mostrar el título -->
+<h1>{{title}}</h1>
+<!-- Navegación con enlaces que utilizan routerLink para navegar a las vistas de dashboard y heroes -->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Ciudades</a>
+</nav>
+<!-- Enrutador de salida que se utilizará para mostrar el contenido de las vistas -->
+<router-outlet></router-outlet>
+<!-- Componente app-messages que se utilizará para mostrar mensajes -->
+
