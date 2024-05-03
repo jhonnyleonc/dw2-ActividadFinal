@@ -1,22 +1,15 @@
-//esta importancion es importante ya que con esta agregamos el html y css de la carpeta hero
-import { Component, OnInit } from '@angular/core'; //esta importacion es una decoradoro que especifica metadatos Angular para un componente.
-
+// Importa los decoradores Component y OnInit desde @angular/core
+import { Component, OnInit } from '@angular/core';
+// Importa la interfaz Hero desde el archivo 'hero.ts' ubicado en el directorio '../'
 import { Hero } from '../hero';
-
-//importamos la constante de HEROES del archivo mock-heroes.ts
-import {HEROES} from '../mock-heroes';
-
-import {FormsModule} from '@angular/forms';
-
-//fase 3
+// Importa la constante HEROES desde el archivo 'mock-heroes.ts' ubicado en el directorio '../'
+import { HEROES } from '../mock-heroes';
+// Importa el módulo FormsModule para trabajar con formularios en el componente
+import { FormsModule } from '@angular/forms';
+// Importa el servicio HeroService desde el archivo 'hero.service' ubicado en el directorio '../'
 import { HeroService } from '../hero.service';
+// Importa el servicio MessageService desde el archivo 'message.service' ubicado en el directorio '../'
 import { MessageService } from '../message.service';
-
-//fase 5
-
-
-
-
 
 import {
   /* . . . */

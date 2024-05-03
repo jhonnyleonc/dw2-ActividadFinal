@@ -6,24 +6,27 @@
 */
 
 
-// Importa los decoradores Component y Input desde la biblioteca '@angular/core'.
+// Importa los decoradores Component, Input y OnInit desde @angular/core
 import { Component, Input, OnInit } from '@angular/core';
 
+// Importa la clase ActivatedRoute desde @angular/router para obtener información sobre la ruta activa
 import { ActivatedRoute } from '@angular/router';
 
-import {NgFor, NgIf, UpperCasePipe} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+// Importa NgFor, NgIf y UpperCasePipe desde @angular/common
+import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
 
-// Importa la clase Hero desde el archivo 'hero.ts' ubicado en el directorio '../' relativo al archivo actual.
+// Importa FormsModule para trabajar con formularios en el componente
+import { FormsModule } from '@angular/forms';
+
+// Importa la clase Hero desde el archivo 'hero.ts' ubicado en el directorio '../' relativo al archivo actual
 import { Hero } from '../hero';
 
+// Importa el servicio HeroService desde el archivo 'hero.service' ubicado en el directorio '../' relativo al archivo actual
 import { HeroService } from '../hero.service';
 
-
-
-
-
+// Importa la clase Location desde @angular/common para controlar la ubicación del navegador
 import { Location } from '@angular/common';
+
 
 
 

@@ -1,21 +1,30 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// Importa el módulo NgModule desde '@angular/core'
+import { NgModule } from '@angular/core'; 
 
-//importamos Formsmodule ya que con esto podemos ocupar la sintaxis de  ngModel, que ocupamos en la primera fase
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+// Importa el módulo BrowserModule desde '@angular/platform-browser'
+import { BrowserModule } from '@angular/platform-browser'; 
 
-// Importa el componente AppComponent desde el archivo 'app.component'
-import { AppComponent } from './app.component';
+// Importa el módulo FormsModule desde '@angular/forms', que proporciona funcionalidades para formularios en Angular, incluido ngModel.
+import { FormsModule } from '@angular/forms'; 
 
-//aca abrimos la ruta relativa para buscar e importar HeroesComponent
-import { HeroesComponent } from './heroes/heroes.component';
+// Importa el componente AppComponent desde './app.component'
+import { AppComponent } from './app.component'; 
 
-//importamos los archivos de la carpeta de hero-detail
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-// Importa el componente MessagesComponent desde el archivo 'messages/messages.component'
-import { MessagesComponent } from './messages/messages.component';
-import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+// Importa el componente HeroesComponent desde './heroes/heroes.component'
+import { HeroesComponent } from './heroes/heroes.component'; 
+
+// Importa el componente HeroDetailComponent desde './hero-detail/hero-detail.component'
+import { HeroDetailComponent } from './hero-detail/hero-detail.component'; 
+
+// Importa el componente MessagesComponent desde './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component'; 
+
+// Importa el módulo AppRoutingModule desde './app-routing.module', que probablemente contiene configuraciones de enrutamiento de la aplicación.
+import { AppRoutingModule } from './app-routing.module'; 
+
+// Importa el componente DashboardComponent desde './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component'; 
+
 
 
 @NgModule({
